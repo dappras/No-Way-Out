@@ -46,7 +46,7 @@ public class KeyHolder : MonoBehaviour
                 RemoveKey(keyDoor.GetKeyType());
                 keyDoor.OpenDoor();
                 Debug.Log("ini masuuk");
-                SceneManager.LoadScene("Main Menu");
+                SceneManager.LoadScene("Win");
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
             }

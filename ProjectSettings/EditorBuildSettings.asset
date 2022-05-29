@@ -20,4 +20,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 431315cb497cc9f4a80b1b504a9e8596
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 0b1a75c4057c2b64f86e7624f2fc8cf8
+  - enabled: 1
+    path: Assets/Scenes/Lose Menu.unity
+    guid: ff6c9b0e8434a144eab978fa5d99d1a5
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 1.unity
+    guid: 119e1025a7062244d93b55efb8aa51ec
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 2.unity
+    guid: 3fc9eec9186fe264fbe5379296b8a0b1
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 3.unity
+    guid: 1e3386ebf6ea7d54bb3b7e02bdfcc7d5
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 4.unity
+    guid: 610344e5606ee48449e8785c562b4e9d
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 5.unity
+    guid: ffe107143fe4e804a9d9a14014c280fb
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 6.unity
+    guid: 5a298f87fbd60ac44bccbbe663bdac6f
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 7.unity
+    guid: 661f0f5f812ab9e40a040b699953cd95
+  - enabled: 1
+    path: Assets/Scenes/CutScene/Cut Scene 8.unity
+    guid: b61d1a26df8f72f43a34f95535cac3d1
   m_configObjects: {}
