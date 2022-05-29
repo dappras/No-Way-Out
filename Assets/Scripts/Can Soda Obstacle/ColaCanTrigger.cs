@@ -13,14 +13,33 @@ public class ColaCanTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider target)
     {
-        if (target.tag == "Player" && Distance_ <12)
+        StartCoroutine(ExampleCoroutine(target));
+    }
+
+    IEnumerator ExampleCoroutine(Collider target)
+    {
+        if (target.tag == "Player" && Distance_ < 112)
         {
             Debug.Log("Kesentuh Player dan jarak kurang dari 15");
-            chasingPlayer.enabled = true;
-            //chasingCanSoda.enabled = true;
+            // chasingPlayer.enabled = true;
             patroll.enabled = false;
+            chasingCanSoda.enabled = true;
+            yield return new WaitForSeconds(10);
+            chasingCanSoda.enabled = false;
+            patroll.enabled = true;
         }
+
+
+        // //Print the time of when the function is first called.
+        // Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        // //yield on a new YieldInstruction that waits for 5 seconds.
+        // yield return new WaitForSeconds(5);
+
+        // //After we have waited 5 seconds print the time again.
+        // Debug.Log("Finished Coroutine at timestamp : " + Time.time);
     }
+
 
     // Update is called once per frame
     void Update()

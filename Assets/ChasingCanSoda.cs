@@ -14,7 +14,6 @@ public class ChasingCanSoda : MonoBehaviour
     {
         collisionLocation = player.transform.position;
         navMeshAgent = GetComponent<NavMeshAgent>();
-        
     }
 
     // Update is called once per frame

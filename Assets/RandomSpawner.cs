@@ -27,38 +27,10 @@ public class RandomSpawner : MonoBehaviour
 
         Instantiate(key, keyLocation[Random.Range(0, keyLocation.Count)], Quaternion.Euler(90,0,0));
 
-        for(int i = 0; i < canSodaLocation.Count; i++)
+        for(int i = 0; i < 3; i++)
         {
-            Instantiate(canSoda, canSodaLocation[i], Quaternion.Euler(90, 0, 0));
+            Instantiate(canSoda, canSodaLocation[Random.Range(0, canSodaLocation.Count)], Quaternion.Euler(90, 0, 0));
         }
-        // Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 17), 4, Random.Range(-18, 38));
-        // Instantiate(cubePrefab, randomSpawnPosition, Quaternion.identity);
-        // int lokasi = new Random(1, 4);
-
+        
     }
-    // Update is called once per frame
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.RightAlt))
-    //     {
-    //         int lokasi = Random.Range(1, 5);
-    //         switch (lokasi)
-    //         {
-    //             case 1:
-    //                 Instantiate(cubePrefab, kamar1, Quaternion.identity);
-    //                 break;
-    //             case 2:
-    //                 Instantiate(cubePrefab, kamar2, Quaternion.identity);
-    //                 break;
-    //             case 3:
-    //                 Instantiate(cubePrefab, kamar3, Quaternion.identity);
-    //                 break;
-    //             case 4:
-    //                 Instantiate(cubePrefab, kamar4, Quaternion.identity);
-    //                 break;
-    //         }
-    //         // Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 17), 4, Random.Range(-18, 38));
-    //         // Instantiate(cubePrefab, randomSpawnPosition, Quaternion.identity);
-    //     }
-    // }
 }
