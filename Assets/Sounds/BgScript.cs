@@ -17,6 +17,10 @@ public class BgScript : MonoBehaviour
 
         BgInstance = this;
         DontDestroyOnLoad(this);
+        // else
+        // {
+        //     Destroy(gameObject);
+        // }
     }
 
     void OnEnable()
