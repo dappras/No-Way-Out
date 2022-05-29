@@ -4,58 +4,36 @@ using UnityEngine;
 
 public class RandomSpawner3 : MonoBehaviour
 {
-    public GameObject cubePrefab;
+    public GameObject key;
+    // public GameObject canSoda;
 
-    Vector3 location1 = new Vector3(-16, 1, -5);
-    Vector3 location2 = new Vector3(8, 1, 18);
-    Vector3 location3 = new Vector3(6, 1, 22);
-    Vector3 location4 = new Vector3(-2, 1, -13);
+    List<Vector3> keyLocation = new List<Vector3>();
+    // List<Vector3> canSodaLocation = new List<Vector3>();
 
     void Start()
     {
-        // Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 17), 4, Random.Range(-18, 38));
-        // Instantiate(cubePrefab, randomSpawnPosition, Quaternion.identity);
-        // int lokasi = new Random(1, 4);
-        int lokasi = Random.Range(1, 5);
-        switch (lokasi)
-        {
-            case 1:
-                Instantiate(cubePrefab, location1, Quaternion.identity);
-                break;
-            case 2:
-                Instantiate(cubePrefab, location2, Quaternion.identity);
-                break;
-            case 3:
-                Instantiate(cubePrefab, location3, Quaternion.identity);
-                break;
-            case 4:
-                Instantiate(cubePrefab, location4, Quaternion.identity);
-                break;
-        }
+        keyLocation.Add(new Vector3((float)16.7, (float)0.6, (float)26.5));
+        keyLocation.Add(new Vector3((float)-4.2, (float)0.6, (float)-21.9));
+        keyLocation.Add(new Vector3((float)-21, (float)0.6, -(float)16.5));
+        keyLocation.Add(new Vector3((float)5.7, (float)0.6, (float)0.3));
+
+        // Instantiate(key, keyLocation[0], Quaternion.Euler(90,0,0));
+        // Instantiate(key, keyLocation[1], Quaternion.Euler(90,0,0));
+        // Instantiate(key, keyLocation[2], Quaternion.Euler(90,0,0));
+        // Instantiate(key, keyLocation[3], Quaternion.Euler(90,0,0));
+
+        // canSodaLocation.Add(new Vector3((float)18.25, (float)0.5, (float)-12.57));
+        // canSodaLocation.Add(new Vector3((float)-0.85, (float)0.5, (float)1.67));
+        // canSodaLocation.Add(new Vector3((float)-3.27, (float)0.5, (float)-7.07));
+        // canSodaLocation.Add(new Vector3((float)3.47, (float)0.5, (float)12.91));
+        // canSodaLocation.Add(new Vector3((float)-6.27, (float)0.5, (float)13));
+        // canSodaLocation.Add(new Vector3((float)6.68, (float)0.5, (float)-5.04));
+
+        Instantiate(key, keyLocation[Random.Range(0, keyLocation.Count)], Quaternion.Euler(90, 0, 0));
+
+        // for (int i = 0; i < 3; i++)
+        // {
+        //     Instantiate(canSoda, canSodaLocation[Random.Range(0, canSodaLocation.Count)], Quaternion.Euler(90, 0, 0));
+        // }
     }
-    // Update is called once per frame
-    // void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.RightAlt))
-    //     {
-    //         int lokasi = Random.Range(1, 5);
-    //         switch (lokasi)
-    //         {
-    //             case 1:
-    //                 Instantiate(cubePrefab, location1, Quaternion.identity);
-    //                 break;
-    //             case 2:
-    //                 Instantiate(cubePrefab, location2, Quaternion.identity);
-    //                 break;
-    //             case 3:
-    //                 Instantiate(cubePrefab, location3, Quaternion.identity);
-    //                 break;
-    //             case 4:
-    //                 Instantiate(cubePrefab, location4, Quaternion.identity);
-    //                 break;
-    //         }
-    //         // Vector3 randomSpawnPosition = new Vector3(Random.Range(-20, 17), 4, Random.Range(-18, 38));
-    //         // Instantiate(cubePrefab, randomSpawnPosition, Quaternion.identity);
-    //     }
-    // }
 }
