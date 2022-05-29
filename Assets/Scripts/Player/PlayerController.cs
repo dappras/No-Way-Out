@@ -33,19 +33,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 standCenter = new Vector3(0, 0.9f, 0);
 
     [Header("Camera Parameters")]
-    [SerializeField] private float defaultCameraY = 1.4f;
-    [SerializeField] private float defaultCameraZ = 0.31f;
-    [SerializeField] private float crouchCameraY = 0.8f;
-    [SerializeField] private float crouchCameraZ = 0.58f;
-    [SerializeField] private float crawlForwardCameraY = 0.4f;
-    [SerializeField] private float crawlForwardCameraZ = 0.75f;
-    [SerializeField] private float crawlBackwardCameraY = 0.6f;
-    [SerializeField] private float crawlBackwardCameraZ = 0f;
-    [SerializeField] private float backwardCameraY = 0.9f;
-    [SerializeField] private float backwardCameraZ = 0.6f;
-    [SerializeField] private float sidewaysCameraY = 1.2f;
-    [SerializeField] private float sidewaysCameraZ = 0.5f;
-    private float cameraYPos, cameraZPos;
+    [SerializeField] Vector3 idleRunCamera = new Vector3(0, (float)1.4, (float)0.31);
+    [SerializeField] Vector3 walkForwardCamera = new Vector3(0, (float)1.4, (float)0.4);
+    [SerializeField] Vector3 crouchCamera = new Vector3(0, (float)0.8, (float)0.7);
+    [SerializeField] Vector3 crouchForwardCamera = new Vector3(0, (float)0.51, (float)0.85);
+    [SerializeField] Vector3 crouchBackwardCamera = new Vector3(0, (float)0.72, (float)0.27);
+    [SerializeField] Vector3 sidewardCamera = new Vector3((float)0.14, (float)1.19, (float)0.58);
+    [SerializeField] Vector3 backwardCamera = new Vector3((float)-0.4, (float)0.97, (float)0.84);
 
     //ANIMATION
     Animator animator;
@@ -96,9 +90,13 @@ public class PlayerController : MonoBehaviour
 
     private void HandleCameraPosition()
     {
-        float cameraYPos = isCrouching ? crouchCameraY : defaultCameraY;
-        float cameraZPos = isCrouching ? crouchCameraZ : defaultCameraZ;
-        Vector3 newPos = new Vector3(playerCamera.transform.localPosition.x, cameraYPos, cameraZPos);
+        bool runPressed = Input.GetKey(KeyCode.LeftShift);
+        bool forwardPressed = Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow);
+        bool rightwardPressed = Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow);
+        bool leftwardPressed = Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow);
+        bool backwardPressed = Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow);
+
+        Vector3 newPos = isCrouching ? crouchCamera : (forwardPressed) ? walkForwardCamera :(backwardPressed)?backwardCamera: (leftwardPressed || rightwardPressed) ? sidewardCamera : (isCrouching && forwardPressed) ? crouchForwardCamera : (isCrouching && backwardPressed) ? crouchBackwardCamera : idleRunCamera;
 
         playerCamera.transform.localPosition = Vector3.Lerp(
                 playerCamera.transform.localPosition,

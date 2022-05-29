@@ -11937,18 +11937,13 @@ MonoBehaviour:
   timeToCrouch: 0.25
   crouchCenter: {x: 0, y: 0.51, z: 0}
   standCenter: {x: 0, y: 0.9, z: 0}
-  defaultCameraY: 1.4
-  defaultCameraZ: 0.31
-  crouchCameraY: 0.8
-  crouchCameraZ: 0.6
-  crawlForwardCameraY: 0.4
-  crawlForwardCameraZ: 0.75
-  crawlBackwardCameraY: 0.6
-  crawlBackwardCameraZ: 0
-  backwardCameraY: 0.7
-  backwardCameraZ: 0.7
-  sidewaysCameraY: 0.7
-  sidewaysCameraZ: 0.7
+  idleRunCamera: {x: 0, y: 1.4, z: 0.31}
+  walkForwardCamera: {x: 0, y: 1.4, z: 0.4}
+  crouchCamera: {x: 0, y: 0.8, z: 0.7}
+  crouchForwardCamera: {x: 0, y: 0.51, z: 0.85}
+  crouchBackwardCamera: {x: 0, y: 0.72, z: 0.27}
+  sidewardCamera: {x: 0.14, y: 1.19, z: 0.58}
+  backwardCamera: {x: -0.4, y: 0.97, z: 0.84}
 --- !u!54 &1980210088
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13090,7 +13085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195076316041690977, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.766
+      value: 13.8
       objectReference: {fileID: 0}
     - target: {fileID: 4195076316041690977, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13098,7 +13093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4195076316041690977, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.95
+      value: 32.9
       objectReference: {fileID: 0}
     - target: {fileID: 4195076316041690977, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13141,6 +13136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 417322544}
     - target: {fileID: 6481999244000105336, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481999244000105336, guid: 4d0cbf214ffccd84faf36999c01b7810, type: 3}
       propertyPath: chasingPlayer
       value: 
       objectReference: {fileID: 417322541}
@@ -13163,15 +13162,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5429136557737005240, guid: 732714dec8919e6ae9a432611470bbe5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.48
+      value: 23.5
       objectReference: {fileID: 0}
     - target: {fileID: 5429136557737005240, guid: 732714dec8919e6ae9a432611470bbe5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.393
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 5429136557737005240, guid: 732714dec8919e6ae9a432611470bbe5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.41
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 5429136557737005240, guid: 732714dec8919e6ae9a432611470bbe5, type: 3}
       propertyPath: m_LocalRotation.w

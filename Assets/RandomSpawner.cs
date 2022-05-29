@@ -16,9 +16,9 @@ public class RandomSpawner : MonoBehaviour
         Debug.Log(key.tag);
         Debug.Log(canSoda.tag);
         keyLocation.Add(new Vector3((float)-13.9, (float)0.5, (float)9.5));
-        keyLocation.Add(new Vector3(7, (float)2.4, (float)11.2));
-        keyLocation.Add(new Vector3(-20, (float)1.8, (float)-11.2));
-        keyLocation.Add(new Vector3((float)8.43, (float)0.78, (float)6.45));
+        keyLocation.Add(new Vector3(7, (float)0.5, (float)11.2));
+        keyLocation.Add(new Vector3(-20,(float)1.8,(float)-10.7));
+        keyLocation.Add(new Vector3((float)8.43, (float)0.8, (float)6.45));
 
         canSodaLocation.Add(new Vector3((float)17.81, (float)1, (float)-6.83));
         canSodaLocation.Add(new Vector3((float)7.6, (float)1, (float)-12.7));
@@ -27,10 +27,10 @@ public class RandomSpawner : MonoBehaviour
 
         Instantiate(key, keyLocation[Random.Range(0, keyLocation.Count)], Quaternion.Euler(90,0,0));
 
-        for(int i = 0; i < 3; i++)
-        {
-            Instantiate(canSoda, canSodaLocation[Random.Range(0, canSodaLocation.Count)], Quaternion.Euler(90, 0, 0));
-        }
+        // for(int i = 0; i < 3; i++)
+        // {
+        //     Instantiate(canSoda, canSodaLocation[Random.Range(0, canSodaLocation.Count)], Quaternion.Euler(90, 0, 0));
+        // }
         
     }
 }
